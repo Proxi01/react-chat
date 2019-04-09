@@ -3,7 +3,7 @@ import React from 'react';
 import classnames from 'classnames';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
-import Avatar from 'material-ui/Avatar';
+import Avatar from './Avatar';
 
 import titleInitials from '../utils/titleInitials'
 
@@ -13,8 +13,8 @@ const Message = ({classes, message, index})=>{
   const isMessageFromMe = message.sender === 'me';
 
   const userAvatar = (
-    <Avatar>
-      {titleInitials(message.sender)}
+    <Avatar colorFrom = {message.sender}>
+      {message.sender}
     </Avatar>
   );
 
